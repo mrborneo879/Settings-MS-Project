@@ -56,15 +56,55 @@
 		8C5793512B12775D0064DA2C /* Settings MS Project */ = {
 			isa = PBXGroup;
 			children = (
+				8C5793662B1278D20064DA2C /* Sources */,
+				8C57936A2B12791B0064DA2C /* Resources */,
+			);
+			path = "Settings MS Project";
+			sourceTree = "<group>";
+		};
+		8C5793662B1278D20064DA2C /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				8C5793672B1278E70064DA2C /* Extensions */,
+				8C5793682B1278F10064DA2C /* App */,
+				8C5793692B1278FC0064DA2C /* ViewController */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		8C5793672B1278E70064DA2C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		8C5793682B1278F10064DA2C /* App */ = {
+			isa = PBXGroup;
+			children = (
 				8C5793522B12775D0064DA2C /* AppDelegate.swift */,
 				8C5793542B12775D0064DA2C /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		8C5793692B1278FC0064DA2C /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
 				8C5793562B12775D0064DA2C /* ViewController.swift */,
-				8C5793582B12775D0064DA2C /* Main.storyboard */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		8C57936A2B12791B0064DA2C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				8C57935B2B12775E0064DA2C /* Assets.xcassets */,
+				8C5793582B12775D0064DA2C /* Main.storyboard */,
 				8C57935D2B12775E0064DA2C /* LaunchScreen.storyboard */,
 				8C5793602B12775E0064DA2C /* Info.plist */,
 			);
-			path = "Settings MS Project";
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -296,9 +336,8 @@
 				INFOPLIST_FILE = "Settings MS Project/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIMainStoryboardFile = Resources/Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -323,9 +362,8 @@
 				INFOPLIST_FILE = "Settings MS Project/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIMainStoryboardFile = Resources/Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
