@@ -13,6 +13,9 @@
 		8C57935A2B12775D0064DA2C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C5793582B12775D0064DA2C /* Main.storyboard */; };
 		8C57935C2B12775E0064DA2C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C57935B2B12775E0064DA2C /* Assets.xcassets */; };
 		8C57935F2B12775E0064DA2C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C57935D2B12775E0064DA2C /* LaunchScreen.storyboard */; };
+		8C57936D2B127ADB0064DA2C /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8C57936C2B127ADB0064DA2C /* SnapKit */; };
+		8C57936F2B127ADB0064DA2C /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 8C57936E2B127ADB0064DA2C /* SnapKit-Dynamic */; };
+		8C5793712B138D930064DA2C /* ViewController Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5793702B138D930064DA2C /* ViewController Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,7 @@
 		8C57935B2B12775E0064DA2C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8C57935E2B12775E0064DA2C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8C5793602B12775E0064DA2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8C5793702B138D930064DA2C /* ViewController Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C57936D2B127ADB0064DA2C /* SnapKit in Frameworks */,
+				8C57936F2B127ADB0064DA2C /* SnapKit-Dynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +81,7 @@
 		8C5793672B1278E70064DA2C /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				8C5793702B138D930064DA2C /* ViewController Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -123,6 +130,10 @@
 			dependencies = (
 			);
 			name = "Settings MS Project";
+			packageProductDependencies = (
+				8C57936C2B127ADB0064DA2C /* SnapKit */,
+				8C57936E2B127ADB0064DA2C /* SnapKit-Dynamic */,
+			);
 			productName = "Settings MS Project";
 			productReference = 8C57934F2B12775D0064DA2C /* Settings MS Project.app */;
 			productType = "com.apple.product-type.application";
@@ -151,6 +162,9 @@
 				Base,
 			);
 			mainGroup = 8C5793462B12775D0064DA2C;
+			packageReferences = (
+				8C57936B2B127ADB0064DA2C /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 8C5793502B12775D0064DA2C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -179,6 +193,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C5793572B12775D0064DA2C /* ViewController.swift in Sources */,
+				8C5793712B138D930064DA2C /* ViewController Extensions.swift in Sources */,
 				8C5793532B12775D0064DA2C /* AppDelegate.swift in Sources */,
 				8C5793552B12775D0064DA2C /* SceneDelegate.swift in Sources */,
 			);
@@ -399,6 +414,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8C57936B2B127ADB0064DA2C /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.6.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8C57936C2B127ADB0064DA2C /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8C57936B2B127ADB0064DA2C /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		8C57936E2B127ADB0064DA2C /* SnapKit-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8C57936B2B127ADB0064DA2C /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = "SnapKit-Dynamic";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8C5793472B12775D0064DA2C /* Project object */;
 }
