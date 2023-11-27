@@ -4,6 +4,10 @@ import SnapKit
 
 final class ViewController: UIViewController {
     
+    // MARK: - Initial Data
+    
+    var settingsNames = ["Авиарежим", "Wi-Fi", "Bluetooth", "Сотовая связь", "Режим модема", "VPN"]
+    
     // MARK: - UIElements & Outlets
     
     private lazy var tableView: UITableView = {
@@ -19,7 +23,7 @@ final class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        title = "Settings"
+        title = "Настройки"
         navigationController?.navigationBar.prefersLargeTitles = true
         view.addSubview(tableView)
         setupHierarchy()
