@@ -6,16 +6,16 @@ final class MainViewController: UIViewController {
     
     // MARK: - State
     
-    //var settings: [[Setting]]?
+    var settings: [[Setting]]?
     var identifier: String = "Cell"
     
     // MARK: - UIElements
     
     private lazy var tableView: UITableView = {
         let table = UITableView(frame: .zero, style: .grouped)
-        //table.dataSource = self
+        table.dataSource = self
         //table.delegate = self
-        //table.register(MainTableViewCell.self, forCellReuseIdentifier: identifier)
+        table.register(MainTableViewCell.self, forCellReuseIdentifier: identifier)
         return table
     }()
     
