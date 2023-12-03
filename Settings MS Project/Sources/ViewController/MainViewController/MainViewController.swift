@@ -14,7 +14,7 @@ final class MainViewController: UIViewController {
     private lazy var tableView: UITableView = {
         let table = UITableView(frame: .zero, style: .grouped)
         table.dataSource = self
-        //table.delegate = self
+        table.delegate = self
         table.register(MainTableViewCell.self, forCellReuseIdentifier: identifier)
         return table
     }()
@@ -28,14 +28,14 @@ final class MainViewController: UIViewController {
         navigationController?.navigationBar.prefersLargeTitles = true
         setupHierarchy()
         setupLayout()
-        //useModelData()
+        fillWithData()
     }
     
     // MARK: - Setup & Layout
     
-    //private func useModelData() {
-    //    settings = Setting.allSettings
-    //}
+    private func fillWithData() {
+        settings = Setting.firstSection
+    }
     
     private func setupHierarchy() {
         view.addSubview(tableView)
