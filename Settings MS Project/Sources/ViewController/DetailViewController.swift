@@ -23,6 +23,17 @@ final class DetailViewController: UIViewController {
         return icon
     }()
     
+    private lazy var commentLabel: UILabel = {
+        let name = UILabel()
+        name.textColor = .black
+        name.textAlignment = .center
+        name.numberOfLines = 5
+        name.text = "Далее дизайн будет улучшаться :)"
+        name.clipsToBounds = true
+        name.font = UIFont.systemFont(ofSize: 15, weight: .bold)
+        return name
+    }()
+    
     // MARK: - Lyfecycle
     
     override func viewDidLoad() {
@@ -36,7 +47,7 @@ final class DetailViewController: UIViewController {
     // MARK: - Setup & Layout
     
     private func setupHierarchy() {
-        [chosenSettingName, chosenSettingIcon].forEach {
+        [chosenSettingName, chosenSettingIcon, commentLabel].forEach {
             view.addSubview($0)
         }
     }
@@ -49,6 +60,13 @@ final class DetailViewController: UIViewController {
         
         chosenSettingIcon.snp.makeConstraints { make in
             make.centerX.centerY.equalTo(view)
+            make.height.equalTo(90)
+            make.width.equalTo(90)
+        }
+        
+        commentLabel.snp.makeConstraints { make in
+            make.centerX.equalTo(chosenSettingName)
+            make.top.equalTo(chosenSettingName.snp.bottom).offset(20)
         }
     }
     

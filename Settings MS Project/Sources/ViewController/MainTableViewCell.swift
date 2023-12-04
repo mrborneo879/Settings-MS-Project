@@ -10,32 +10,32 @@ final class MainTableViewCell: UITableViewCell {
         didSet {
             settingLabel.text = setting?.name
             settingIcon.image = setting?.icon
-           // settingStatus.text = setting?.status
+            settingStatus.text = setting?.status
         }
     }
     
     // MARK: - UIElements
     
-    public var settingLabel: UILabel = {
+    private lazy var settingLabel: UILabel = {
         let name = UILabel()
         name.textColor = .black
         name.font = UIFont.systemFont(ofSize: 17)
         return name
     }()
     
-    public var settingIcon: UIImageView = {
+    private lazy var settingIcon: UIImageView = {
         let icon = UIImageView()
         icon.clipsToBounds = true
         return icon
     }()
-    /*
-    public var settingStatus: UILabel = {
+    
+    private lazy var settingStatus: UILabel = {
         let status = UILabel()
         status.textColor = .lightGray
         status.font = UIFont.systemFont(ofSize: 17)
         return status
     }()
-    */
+    
     // MARK: - Initializers
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -51,12 +51,10 @@ final class MainTableViewCell: UITableViewCell {
     // MARK: - Setup & Layout
     
     private func setupHierarchy() {
-        [settingLabel, settingIcon].forEach {
+        [settingLabel, settingIcon, settingStatus].forEach {
             contentView.addSubview($0)
         }
     }
-    
-    //settingStatus
     
     private func setupLayout() {
         settingLabel.snp.makeConstraints { make in
@@ -70,12 +68,11 @@ final class MainTableViewCell: UITableViewCell {
             make.height.equalTo(28)
             make.width.equalTo(28)
         }
-        /*
+        
         settingStatus.snp.makeConstraints { make in
             make.centerY.equalTo(contentView)
             make.right.equalTo(contentView).offset(-20)
         }
-         */
     }
     
     // MARK: - Reuse

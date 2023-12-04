@@ -34,7 +34,7 @@ final class MainViewController: UIViewController {
     // MARK: - Setup & Layout
     
     private func fillWithData() {
-        settings = Setting.firstSection
+        settings = Setting.settings
     }
     
     private func setupHierarchy() {
